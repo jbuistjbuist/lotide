@@ -1,3 +1,12 @@
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`🙏🏻 Assertion Passed: ${actual} === ${expected}`);
+  } else {
+    console.log(`😩 Assertion Failed: ${actual} !== ${expected}`);
+  }
+};
+
+
 const assertArraysEqual = function(array1, array2) {
   if (array1.length !== array2.length) {
     console.log('✋ Assertion Failed: Arrays are not the same length!');
@@ -12,6 +21,3 @@ const assertArraysEqual = function(array1, array2) {
   console.log('✌️ Assertion Passed: The arrays are identical!');
   return;
 };
-
-
-
