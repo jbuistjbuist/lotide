@@ -26,14 +26,10 @@ const assertObjectsEqual = function(actual, expected) {
   };
   
   if (eqObjects(actual, expected) === true) {
-    console.log(`🤓 Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`)
+    console.log(`🤓 Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
   } else {
-    console.log(` Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`)
+    console.log(`😠 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
   }
 };
 
 assertObjectsEqual({one: [1, 2, 3], two: "two"}, {one: [1, 2, 3], two: "two"});
-
-
-
-
