@@ -19,7 +19,10 @@ const countLetters = function(string) {
   return outputCount;
 };
 
+//TEST CODE
+
 const answer = countLetters("annab");
+
 assertEqual(answer.a, 2);
 assertEqual(answer.n, 2);
 assertEqual(answer.b, 1);

@@ -24,6 +24,8 @@ const eqObjects = function(object1, object2) {
           return false;
         }
       }
+    } else if ((typeof object1[key] === 'object') && (typeof object2[key] === 'object')) {
+      return eqObjects(object1[key], object2[key]);
     } else if (object1[key] !== object2[key]) {
       return false;
     }
@@ -32,7 +34,7 @@ const eqObjects = function(object1, object2) {
 };
 
 
-//TEST CODE
+// TEST CODE
 const ab = {a: "1", b: "2"};
 const ba = {b: "2", a: "1"};
 
@@ -50,3 +52,12 @@ assertEqual(eqObjects(cd, dc), true); // => true
 const cd2 = { c: "1", d: ["2", 4] };
 
 assertEqual(eqObjects(cd, cd2), false); // => false
+
+
+//TEST CODE FOR RECURSIVE
+
+assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true); // => true
+
+assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false); // => false
+
+assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false); // => false

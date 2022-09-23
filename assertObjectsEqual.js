@@ -32,4 +32,8 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
+
+//TEST CODE
+
 assertObjectsEqual({one: [1, 2, 3], two: "two"}, {one: [1, 2, 3], two: "two"});
+assertObjectsEqual({one: [1, 2], two: "two"}, {one: [1, 2, 3], two: "two"});
