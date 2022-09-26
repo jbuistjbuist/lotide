@@ -15,3 +15,4 @@ describe("#head", () => {
     assert.strictEqual(head(['one', 2 , 4, 6]), 'one');
   });
 });
+
