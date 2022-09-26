@@ -5,13 +5,13 @@
  */
 
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🙏🏻 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`😩 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// const assertEqual = function(actual, expected) {
+//   if (actual === expected) {
+//     console.log(`🙏🏻 Assertion Passed: ${actual} === ${expected}`);
+//   } else {
+//     console.log(`😩 Assertion Failed: ${actual} !== ${expected}`);
+//   }
+// };
 
 const findKey = function(object, callback) {
   const keys = Object.keys(object);
@@ -25,16 +25,18 @@ const findKey = function(object, callback) {
   return undefined;
 };
 
-const someObject = {
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-};
+module.exports = findKey;
 
-assertEqual(findKey(someObject, (x) => x.stars === 3), 'Akaleri');
+// const someObject = {
+//   "Blue Hill": { stars: 1 },
+//   "Akaleri":   { stars: 3 },
+//   "noma":      { stars: 2 },
+//   "elBulli":   { stars: 3 },
+//   "Ora":       { stars: 2 },
+//   "Akelarre":  { stars: 3 }
+// };
+
+// assertEqual(findKey(someObject, (x) => x.stars === 3), 'Akaleri');
 
 
 //EXAMPLE

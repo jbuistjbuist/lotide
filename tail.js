@@ -3,7 +3,7 @@ const tail = function(array) {
     return [];
   }
   if (array.length === 1) {
-    return "no tail, length of array is 1";
+    throw new Error("no tail, length of array is 1");
   }
   return array.slice(1);
 };
